@@ -51,4 +51,9 @@ button:hover {
 .body h1 {
     text-align: left;
     margin-left: 50px;
+    color: #1A1A1A;
+}
+
+.body p {
+    color: #333333;
 }
