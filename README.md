@@ -1,4 +1,2 @@
 # Ankle-Sprainers
-This Project Is Still In Progress!
-<br>
-We will Continue Working on it Starting Next Week Monday Inshallah!
+The Ankle Sprainers Progect Will Be Stopped for Some Time, Hopefully Not Long.
