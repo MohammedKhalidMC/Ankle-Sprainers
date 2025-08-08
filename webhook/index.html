@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ankle Sprainers Mod - Webhook</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../scripts/webhook.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Ankle Sprainers Mod!" />
+    <meta property="og:description" content="The Official Website To Download The Ankle Sprainers Mod." />
+    <meta property="og:image" content="https://anklemod.duckdns.org/assets/logo.png" />
+    <meta property="og:url" content="https://anklemod.duckdns.org" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="../assets/logo.png">
+      <a href="../"><h1>Ankle Sprainers Mod</h1></a>
+      <a href="../"><h2>Home</h2></a>
+      <a href="../downloads/"><h2>Downloads</h2></a>
+      <a href="./"><h2>Webhook</h2></a>
+      <a href="../quiz"><h2>Quiz</h2></a>
+    </div>
+    <div class="main">
+      <div class="container">
+        <h1 id="webhook-head">Send Webhook Message</h1>
+        <textarea id="message" placeholder="Type your message here..." onkeydown="checkEnter(event)"></textarea>
+        <button onclick="sendMessage()" id="webhook-button">Send</button>
+        <div class="status" id="status"></div>
+      </div>
+    </div>
+  </body>
+</html>
