@@ -3,8 +3,29 @@ const webhookURL = "https://discord.com/api/webhooks/1155592537692712961/m6tmNHH
 async function sendMessage() {
     const message = document.getElementById("message").value.trim();
     const status = document.getElementById("status");
+    const latexMsg = document.getElementById("latex").value.trim();
+    let fullLatex = "";
+    
+    if (latexMsg) {
+        fullLatex = `\\dpi{400} \\huge \\color{white} ${latexMsg}`
+    }
+    
+    const encodedLatex = encodeURIComponent(fullLatex);
+    const imageUrl = `https://latex.codecogs.com/png.latex?${encodedLatex}`;
+    let payload = {content: message};
+    
+    if (latexMsg) {
+        payload = {
+            content: message,
+            embeds: [{
+                image: {
+                    url: imageUrl
+                }
+            }]
+        }
+    }
 
-    if (!message) {
+    if (!message && !latexMsg) {
         status.innerText = "⚠️ Please enter a message.";
         status.style.color = "#ffaa00";
         return;
@@ -14,7 +35,7 @@ async function sendMessage() {
         const response = await fetch(webhookURL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ content: message })
+          body: JSON.stringify(payload)
         });
 
     if (response.ok) {
