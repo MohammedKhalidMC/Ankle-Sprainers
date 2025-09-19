@@ -4,8 +4,7 @@ body {
   background-color: #121212; /* dark background */
   color: #eee; /* light text */
   font-family: Arial, sans-serif;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
 }
 
 /* Header container as horizontal row */
@@ -372,5 +371,17 @@ textarea {
   #webhook-button {
     font-size: 0.9rem;
     padding: 12px;
+  }
+
+  th:nth-child(4), td:nth-child(4), th:nth-child(1), td:nth-child(1) {
+    display: none;
+  }
+
+  th:nth-child(2), td:nth-child(2) {
+    width: 18vw;
+  }
+
+  th:nth-child(3), td:nth-child(3) {
+    width: 8vw;
   }
 }
