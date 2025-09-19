@@ -42,6 +42,7 @@ async function sendMessage() {
           status.innerText = "✅ Message sent successfully!";
           status.style.color = "#00ff99";
           document.getElementById("message").value = "";
+          document.getElementById("latex").value = "";
     } else {
           status.innerText = "❌ Failed to send message.";
           status.style.color = "#ff4444";
